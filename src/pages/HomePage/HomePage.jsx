@@ -4,8 +4,8 @@ import Article from "../../components/Article/Article";
 const HomePage = () => {
   return (
     <>
-      <h1 className="text-center text-4xl font-bold">Articles</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <h1 className="mt-4 text-center text-4xl font-bold">Articles</h1>
+      <div className="grid gap-4 2xl:grid-cols-3">
         {articleData.map((article) => (
           <Article
             key={article.id}
@@ -14,6 +14,7 @@ const HomePage = () => {
             title={article.title}
             content={article.content}
             author={article.author}
+            date={article.date}
           />
         ))}
       </div>

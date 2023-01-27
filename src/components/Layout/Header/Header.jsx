@@ -6,7 +6,7 @@ const Header = () => {
       <NavLink className="text-3xl" to="/">
         Mon blog
       </NavLink>
-      <nav className="flex gap-3 font-thin">
+      <nav className="flex gap-3 text-sm font-thin">
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Register</NavLink>
       </nav>
