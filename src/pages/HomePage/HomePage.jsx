@@ -3,7 +3,7 @@ import Article from "../../components/Article/Article";
 
 const HomePage = () => {
   return (
-  <>
+    <>
       <h1 className="text-center text-4xl font-bold">Articles</h1>
       <div className="grid grid-cols-3 gap-4">
         {articleData.map((article) => (
@@ -17,9 +17,8 @@ const HomePage = () => {
           />
         ))}
       </div>
-      </>
+    </>
   );
 };
-
 
 export default HomePage;
