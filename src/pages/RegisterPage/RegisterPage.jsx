@@ -6,11 +6,22 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (event) => {
+  async function handleSubmit(event) {
     event.preventDefault();
-    // Perform login logic here
+    await fetch("http://localhost:4000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        name: name,
+        password: password,
+        confirmPassword: confirmPassword,
+      }),
+    });
     console.log("Form submitted!");
-  };
+  }
 
   return (
     <div className="my-8 flex flex-col gap-12 p-4">
