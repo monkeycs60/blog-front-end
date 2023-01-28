@@ -4,7 +4,7 @@ import Article from "../../components/Article/Article";
 const HomePage = () => {
   return (
     <>
-      <h1 className="mt-4 text-center text-4xl font-bold">Articles</h1>
+      <h1 className="my-4 text-center text-4xl font-bold">Articles</h1>
       <div className="grid gap-4 2xl:grid-cols-3">
         {articleData.map((article) => (
           <Article
