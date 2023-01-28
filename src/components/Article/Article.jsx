@@ -1,14 +1,14 @@
 const Article = ({ id, cover, title, content, author, date }) => {
   const dateFormatted = date.replace("T", " at ");
   return (
-    <article className="rounded-lg bg-amber-500 p-2 ">
+    <article className="rounded-lg bg-amber-700 p-2 ">
       <div className="relative">
         <img src={cover} alt={title} className="rounded-xl" />
         <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500">
           {id}
         </span>
-        <span className="absolute right-2 bottom-0 bg-cyan-100/40 ">
-          <time dateTime={date} className="text-yellow-300">
+        <span className="absolute right-2 bottom-2 bg-cyan-100/40 ">
+          <time dateTime={date} className="text-shadow text-yellow-300">
             {dateFormatted}
           </time>
         </span>
