@@ -3,7 +3,11 @@ const Article = ({ id, cover, title, content, author, date }) => {
   return (
     <article className="rounded-lg bg-amber-700 p-2 ">
       <div className="relative">
-        <img src={cover} alt={title} className="rounded-xl" />
+        <img
+          src={cover}
+          alt={title}
+          className="h-40 w-full rounded-xl object-cover"
+        />
         <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500">
           {id}
         </span>
