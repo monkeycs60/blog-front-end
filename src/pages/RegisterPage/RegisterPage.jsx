@@ -8,6 +8,7 @@ const RegisterPage = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    try {
     await fetch("http://localhost:4000/register", {
       method: "POST",
       headers: {
@@ -20,7 +21,10 @@ const RegisterPage = () => {
         confirmPassword: confirmPassword,
       }),
     });
-    console.log("Form submitted!");
+    alert("Registration successful! You can now log in.");
+  } catch (error) {
+    alert(`Registration failed! Erreur = ${error}}`);
+  }
   }
 
   return (
