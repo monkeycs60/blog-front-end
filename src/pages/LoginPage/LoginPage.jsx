@@ -16,13 +16,16 @@ const LoginPage = () => {
         password: password,
       }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        return response.ok
+          ? response.json()
+          : Promise.reject(new Error("Login failed"));
+      })
       .then((data) => {
-        if (data.error) {
-          alert(data.error);
-        } else {
-          alert("Login successful!");
-        }
+        data.error ? alert(data.error) : alert("Login successful!");
+      })
+      .catch((error) => {
+        alert(error.message);
       });
   }
 
